@@ -1,0 +1,30 @@
+
+<veiw class="container">
+    <view  data-weui-theme="{{theme}}" style="width: 113rpx; height: 176rpx; display: block; box-sizing: border-box">
+  <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+    <image class="avatar" src="{{avatarUrl}}"></image>
+  </button> 
+</view>
+<!-- wx:if="{{app.globalData.userInfo != null}}" -->
+<view class="inputName">
+        <input class="Name" value="{{inputValue}}" bindinput = "getValue"/>
+    </view>
+<block wx:if="{{app.globalData.userInfo != null}}" >
+    <view class="Login" bindtap="loginActive">
+        <view class = "Text">登陆</view>
+    </view>
+</block>
+
+
+<block class="nav-list"  >
+        <view class="nav-item" wx:for="{{nList}}"  wx:key="id" data-idx="{{index}}" bindtap="tap" data-nav="{{item.nav}}">
+            <img class="nav-img" src="{{item.ico}}" />
+            <text class="nav-text">{{item.name}}</text>
+        </view>
+        
+</block>
+
+<view>
+    <text class="version">version:1.0.0</text>
+</view>
+</veiw>

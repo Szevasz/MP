@@ -1,0 +1,56 @@
+/* pages/order/order.wxss */
+.All{
+    height: 100vh;
+    background: #657065;
+   
+}
+.Title1{
+    font-size: 120rpx;
+    height: 160rpx;
+    background-color: rgba(138, 137, 124, 1); 
+    text-align: center;
+    font-family: 'STCaiyun';
+    font-weight: bold;
+    text-shadow:10rpx 10rpx 18rpx black;
+} 
+.Login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#5b6456;
+    height: 80rpx;
+    width: 180rpx;
+    border-radius: 20rpx;
+    margin-bottom: 20rpx;
+    z-index: 99;
+}
+.Mountain{
+    position: relative;
+    left: 125rpx;
+    top: -370rpx;
+    width: 500rpx;
+    height: 500rpx;
+    opacity: 1; 
+}
+.Circle{
+    position: relative;
+    left: 210rpx;
+    top: 50rpx;
+    width: 350rpx;
+    height: 350rpx;
+    background: rgba(138, 137, 124, 1);
+    border-radius: 175rpx;
+}
+.Title2{
+    position: relative;
+    text-align: center;
+    top:-370rpx;
+    font-family: 'STCaiyun';
+    font-weight: bold;
+    font-size: 72rpx;
+}
+
+
+
+
+

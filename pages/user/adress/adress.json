@@ -1,0 +1,10 @@
+{
+    "usingComponents": {
+    
+    },
+    "permission": {
+        "scope.userLocation": {
+          "desc": "位置信息用于获取用户自己当前的位置,目前只是用来美化界面作用"
+        }
+      }
+}

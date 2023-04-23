@@ -1,0 +1,53 @@
+page{
+background-color:#657065 ;
+}
+.pub-wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 15rpx;
+    padding-top: 15rpx;
+}
+
+.img-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20rpx 40rpx;
+    border-radius: 10rpx;
+    background-color: rgba(138, 137, 124, 1);
+  }
+  .one-img {
+    position: relative;
+    margin: 4rpx 8rpx;
+  }
+  .img-choose {
+    width: 210rpx;
+    height: 210rpx;
+  }
+  .close-img {
+    width: 30rpx;
+    height: 30rpx;
+    position: absolute;
+    right: 4rpx;
+    top: 4rpx;
+  }
+
+
+.pub-text{
+    background-color: rgba(138, 137, 124, 1);
+    width: 120rpx;
+    height: 60rpx;
+    border-radius: 10rpx;
+    text-align: center;
+    line-height: 60rpx;
+    font-size: 30rpx;
+}
+.input-wrap{
+    margin:20rpx 40rpx;
+    background-color:rgba(189, 187, 176, 1);
+    border-radius: 20rpx;
+}
+.input-text{
+    padding: 10rpx 20rpx;
+}

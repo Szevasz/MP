@@ -1,0 +1,110 @@
+/* pages/community/community.wxss */
+page{
+    background-color: #657065;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title{
+    height: 150rpx;
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    background-color: #7b867b;
+    opacity: 1;
+    border-end-end-radius: 10rpx;
+    border-bottom-left-radius: 10rpx;
+    box-shadow: 0px 2px 4px 0px 
+    
+}
+.titlename{
+    margin: auto;
+    font-size: 100rpx;
+    height: 100rpx;
+    text-align: center;
+    font-family: 'STCaiyun';
+    font-weight: bold;
+    color: #191d19;
+    text-shadow:10rpx 10rpx 18rpx black;
+
+}
+
+
+.main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 40rpx;
+    height: 500rpx;
+    width: 90%;
+    opacity: 1;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px 0px 
+    
+}
+.main .imgList{
+    margin: 20rpx;
+    background-color: #7b867b;
+    height: 400rpx;
+    width: 400rpx;
+    opacity: 10;
+    border-radius: 10px;
+    
+    
+}
+.main .texts{
+    background-color: #7b867b;
+    max-height: fit-content;
+    width: 30%;
+    opacity: 10;
+    border-radius: 10px;
+    display: flex;
+    padding-top: 15rpx;
+    padding-bottom: 15rpx;
+    display: flex;
+    flex-wrap: wrap;
+    word-wrap: normal;
+
+}
+.Text{
+    margin-left: 10rpx;
+    font-weight: 900;
+    word-wrap: normal;
+    color: #343a34 ;
+}
+.main .imgList .image-1{
+    height: 100%;
+    width: 100%;
+    justify-self: center;
+    align-self: center;
+    border-radius: 10px;
+}
+.main .imgList .image-2-3{
+    height: 45%;
+    width: 45%;
+    margin: 2%;
+    border-radius: 10px;
+}
+
+.main .imgList .image-5-9{
+    height: 30%;
+    width: 30%;
+    margin: 1.4%;
+    border-radius: 10px;
+
+}
+
+.del {
+    margin: 10rpx;
+    width: 80rpx;
+    height: 80rpx;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    border-radius: 10px;
+    background-color: #e76f51;
+    align-self: flex-end;
+    justify-self: flex-end;
+    object-fit: contain;
+}

@@ -1,0 +1,13 @@
+
+{
+    "navigationBarTitleText": "发布动态",
+
+    "usingComponents": {
+    
+    },
+    "permission": {
+        "scope.userLocation": {
+          "desc": "位置信息用于获取用户自己当前的位置,用来之后显示自己当前的位置"
+        }
+      }
+}

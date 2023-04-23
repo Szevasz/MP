@@ -1,0 +1,21 @@
+<!--pages/community/add.wxml-->
+
+<view class = "pub-wrap">
+    <view class = "pub-text" bindtap="submitData">Publish</view>
+</view>
+
+<view class = "img-wrap">
+    <block wx:for="{{cloudImgList}}" wx:key="index">
+        <view class = "one-img">
+            <image src="{{item}}" class = "img-choose"></image>
+            <image src="/icon/close.png" class = "close-img" bindtap="deleteImg" data-index="{{index}}"></image>
+        </view>
+    </block>
+    <view class = "one-img" bindtap="chooseImage" wx:if="{{cloudImgList.length < 9}}">
+        <image src="/icon/add.png" class = "img-choose"></image>
+    </view>
+ </view>
+
+<view class = "input-wrap">
+    <textarea placeholder="这一刻的想法..." class = "input-text" maxlength="2000" bindinput = "getValue"></textarea>
+</view>

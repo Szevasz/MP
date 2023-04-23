@@ -1,0 +1,243 @@
+/* pages/community/community.wxss */
+page{
+    background-color: #657065;
+    
+}
+.Add{
+    position: absolute;
+    display: flex;
+    width: 100rpx;
+    height: 100rpx;
+    top: 15rpx;
+    left: 640rpx;
+    border-radius: 50rpx;
+    background:rgba(189, 187, 176, 1);
+    position: fixed;
+    z-index: 99;
+}
+.Vertical{
+    position: relative;
+    height: 60rpx;
+    width: 10rpx;
+    background: rgb(64, 61, 57);
+    left: -13rpx;
+    top: 20rpx;
+    border-radius: 20rpx;
+}
+.Transverse{
+    height: 10rpx;
+    width:60rpx;
+    background: rgb(64, 61, 57);
+    position: relative;
+    top: 45rpx;
+    left: 23rpx;
+    border-radius: 20rpx;
+}
+.message{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin-top: 40rpx;
+    margin-left: 5%;
+    max-height: initial;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px 0px 
+}
+.InfoAndTime{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    /* top: 40rpx; */
+    height: 140rpx;
+    width: 100%;
+}
+.Head{
+    display: flex;
+    position: relative;
+    left:-60rpx;
+    top: 35rpx;
+    height: 100rpx;
+    width: 100rpx;
+}
+.userHead
+{
+    height:100rpx;
+    width:100rpx;
+    border-radius: 50rpx;
+    top: 20rpx;
+}
+.Name{
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: -20rpx;
+    top: 30rpx;
+    height:100rpx;
+
+}
+.Time{
+    display: flex;
+    align-items: center;
+    position: relative;
+    height:100rpx;
+    top: 30rpx;
+}
+.imags-wrap {
+    margin-top: 10rpx;
+    width: 560rpx;
+  }
+  .image-1 {
+    width: 500rpx;
+    height: 500rpx;
+    margin-left: 30rpx;
+    border-radius: 50rpx;
+  }
+  .image-2-3 {
+    width: 180rpx;
+    height: 180rpx;
+    margin-right: 6rpx;
+    border-radius: 18rpx;
+  }
+  .image-4 {
+    width: 240rpx;
+    height: 240rpx;
+    margin-left: 25rpx;
+    border-radius: 24rpx;
+  }
+  .image-5-9 {
+    width: 180rpx;
+    height: 180rpx;
+    margin-right: 6rpx;
+    border-radius: 18rpx;
+  }
+.TextBox{
+    position: relative;
+    width: 600rpx;
+    background-color:rgba(138, 137, 124, 1);
+    margin-top: 20rpx;
+    border-radius: 20rpx;
+}
+.Text{
+    position: relative;
+    left: 10rpx;
+    width:550rpx;
+}
+.Delete-Box{
+    display: flex;
+    justify-content: center;
+}
+.Delete{
+    color: gray;
+}
+.LikeAndComment{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-top: 10rpx;
+    width: 600rpx;
+
+}
+.Like{
+    position: relative;
+    width: 60rpx;
+    height: 60rpx;
+    background:#657065;
+    /* border-radius: 20rpx; */
+}
+.Comment{
+    position: relative;
+    width: 60rpx;
+    height: 60rpx;
+    left: 490rpx;
+    background:#657065;
+    /* border-radius: 20rpx; */
+}
+
+.likeicon{
+    width: 60rpx;
+    height: 60rpx;
+}
+.commenticon{
+    width: 54rpx;
+    height: 54rpx;
+}
+.Like-Box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #5b6456;
+    position: relative;
+    margin:0rpx 60rpx;
+    border-radius: 20rpx;
+}
+.like_userhead{
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 30rpx;
+    margin: 5rpx 8rpx;
+}
+.Comcent-Box{
+    background-color: #5b6456;
+    padding: 20rpx 20rpx;
+    margin: 0rpx 60rpx;
+    margin-top: 15rpx;
+    border-radius: 40rpx;
+    margin-bottom: 15rpx;
+}
+.comcent{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10rpx;
+}
+.comcent-userhead{
+    width: 80rpx;
+    height: 80rpx;
+    margin-right: 10rpx;
+    border-radius: 10rpx;
+}
+.comcent-nameAndtime{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 500rpx;
+}
+.comcent-nickname{
+    font-weight: bolder;
+}
+.comcent-time{
+    color: #343a40;
+    font-size: 24rpx;
+}
+.comment-obj{
+    font-weight: bolder;
+}
+.pub-comment{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(138, 137, 124, 1);
+    padding: 15rpx 20rpx;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+}
+.pub-left{
+    color:#7f7f7f;
+    background-color: rgba(189, 187, 176, 1);
+    border-radius: 15rpx;
+    margin-right: 30rpx;
+}
+.pub-input{
+    padding: 10rpx 20rpx;
+    width: 560rpx;
+}
+.pub-botton{
+    border:solid 3rpx black;
+    border-radius: 10rpx;
+    padding: 10rpx 10rpx;
+}
+.blank{
+    background-color: #657065;   
+}

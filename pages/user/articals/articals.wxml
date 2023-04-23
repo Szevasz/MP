@@ -1,0 +1,40 @@
+<view class="title">
+    <text class="titlename">我的文章
+    </text>
+</view>
+
+<!--信息卡片-->
+<view class="main" wx:for="{{actionsList}}" wx:key="index" wx:for-index="numm">
+    <img class="ico" src="{{item.faceImg}}" /> 
+    <!--图片集合-->
+    <view class="imgList" >
+            <block wx:if="{{item.images.length == 1}}" wx:for="{{item.images}}" wx:for-item="imgItem" wx:key="index" wx:for-index = "indexx">
+                <!-- 单图布局 -->
+                <image src="{{imgItem}}" class="image-1"  bindtap="previewImg" data-src = "{{imgItem}}" data-index = "{{numm}}"></image>
+            </block>
+            <!-- 2-3张图布局 -->
+            <block wx:if="{{item.images.length == 2 || item.images.length == 3}}" wx:for="{{item.images}}" wx:for-item="imgItem" wx:key="index">
+            <image src="{{imgItem}}" class="image-2-3"  bindtap="previewImg" data-src = "{{imgItem}}" data-index = "{{numm}}"></image>
+            </block>
+            <!-- 4图布局 -->
+            <block wx:if="{{item.images.length == 4}}" wx:for="{{item.images}}" wx:for-item="imgItem" wx:key="index">
+            <image src="{{imgItem}}" class="image-4" bindtap="previewImg" data-src = "{{imgItem}}" data-index = "{{numm}}"></image>
+            </block>
+            <!-- 5-9张图布局 -->
+            <block wx:if="{{item.images.length > 4 && item.images.length <= 9}}" wx:for="{{item.images}}" wx:for-item="imgItem" wx:key="index">
+            <image src="{{imgItem}}" class="image-5-9" bindtap="previewImg" data-src = "{{imgItem}}" data-index = "{{numm}}"></image>
+            </block>
+            
+    </view>
+
+    
+    <!--文本内容-->
+    <view class="texts">
+        <view class = "Text">{{item.text}}</view>
+    </view>
+   <!--删除按钮-->
+
+    <img class="del" bindtap="deleteAction" data-id="{{item._id}}" src="https://s10.aconvert.com/convert/p3r68-cdx67/axi5l-fgc3u-001.ico" />
+
+    
+</view>

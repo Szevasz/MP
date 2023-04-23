@@ -1,0 +1,52 @@
+{
+    "pages": [
+        "pages/order/order",
+        "pages/order/order1",
+        "pages/community/community",
+        "pages/community/add",
+        "pages/item/item",
+        "pages/user/user",
+        "pages/user/articals/articals",
+        "pages/user/adress/adress",
+        "pages/user/my/my"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#bdbbb0",
+        "navigationBarTitleText": "M&P 山野",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "backgroundColor": "#BDBBB0",
+        "selectedColor": "#8a897c",
+        "list": [
+            {
+                "pagePath": "pages/order/order",
+                "text": "首页",
+                "iconPath": "/icon/mountain.png",
+                "selectedIconPath": "/icon/mountain.png"
+            },
+            {
+                "pagePath": "pages/community/community",
+                "text": "社区",
+                "iconPath": "/icon/communication.png",
+                "selectedIconPath": "/icon/communication-active.png"
+            },
+            {
+                "pagePath": "pages/user/user",
+                "text": "我的",
+                "iconPath": "/icon/user.png",
+                "selectedIconPath": "/icon/user-active.png"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "lazyCodeLoading": "requiredComponents",
+    
+    "permission": {
+        "scope.userLocation": {
+          "desc": "位置信息用于获取用户自己当前的位置,用来之后显示自己当前的位置"
+        }
+      }
+}

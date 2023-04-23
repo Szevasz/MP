@@ -1,0 +1,89 @@
+<!--pages/community/community.wxml-->
+<view class = "Add" bindtap="AddNew">
+    <view class = "Transverse"></view>
+    <view class = "Vertical"></view>
+</view>
+<!-- actionsList为从云数据库拿出的数据 -->
+<block class="messages" wx:for="{{actionsList}}" wx:key="index" wx:for-index="numm">
+    <view class = "message">
+        <view class = "InfoAndTime">
+            <view class = "Head">
+                <image class = "userHead" src = "{{item.faceImg}}">head</image>
+            </view>
+            <view class = "Name">
+                <text class = "userName">{{item.nickName}}</text>
+            </view>
+            <view class = "Time">{{item.time}}</view>
+        </view>
+
+        <view class="imags-wrap">
+            <block wx:if="{{item.images.length == 1}}" wx:for="{{item.images}}" wx:for-item="imgItem" wx:key="index" wx:for-index = "indexx">
+                <!-- 单图布局 -->
+                <image src="{{imgItem}}" class="image-1"  bindtap="previewImg" data-src = "{{imgItem}}" data-index = "{{numm}}"></image>
+            </block>
+            <!-- 2-3张图布局 -->
+            <block wx:if="{{item.images.length == 2 || item.images.length == 3}}" wx:for="{{item.images}}" wx:for-item="imgItem" wx:key="index">
+            <image src="{{imgItem}}" class="image-2-3"  bindtap="previewImg" data-src = "{{imgItem}}" data-index = "{{numm}}"></image>
+            </block>
+            <!-- 4图布局 -->
+            <block wx:if="{{item.images.length == 4}}" wx:for="{{item.images}}" wx:for-item="imgItem" wx:key="index">
+            <image src="{{imgItem}}" class="image-4" bindtap="previewImg" data-src = "{{imgItem}}" data-index = "{{numm}}"></image>
+            </block>
+            <!-- 5-9张图布局 -->
+            <block wx:if="{{item.images.length > 4 && item.images.length <= 9}}" wx:for="{{item.images}}" wx:for-item="imgItem" wx:key="index">
+            <image src="{{imgItem}}" class="image-5-9" bindtap="previewImg" data-src = "{{imgItem}}" data-index = "{{numm}}"></image>
+            </block>
+
+        </view>
+
+        <view class = "TextBox">
+            <view class = "Text">{{item.text}}</view>
+        </view>
+
+        <view class = "Delete-Box">
+            <view class = "Delete" wx:if="{{myOpenid == item._openid}}" catchtap="deleteAction" data-id="{{item._id}}">删除</view>
+        </view>
+
+        <view class = "LikeAndComment">
+            <view class = "Like" catchtap="prizeAction" data-id="{{item._id}}">
+                <image class = "likeicon" src="{{item.isPrized?'/icon/like-active.png':'/icon/like.png'}}"></image>
+            </view>
+            <view class = "Comment">
+                <image class = "commenticon" src="/icon/comment.png" catchtap="commentAction"  data-id="{{item._id}}"></image>
+            </view>
+        </view> 
+
+        <view class = "Like-Box">
+            <block wx:for="{{item.prizeList}}" wx:key="index" wx:for-item="imgItem">
+                 <image class = "like_userhead" src="{{imgItem.faceImg}}"></image>
+             </block>
+        </view>
+        
+        <view class = "Comcent-Box"  wx:if="{{item.commentList.length > 0}}">
+            <block wx:for="{{item.commentList}}" wx:for-item="comItem" wx:for-index="comIndex">
+                <view class = "comcent" bindlongtap="{{myOpenid == comItem.openid?'deleteComment':''}}" data-id="{{item._id}}" data-index="{{comIndex}}" bindtap="replyComment"> 
+                    <image class = "comcent-userhead" src="{{comItem.faceImg}}"></image>
+                    <view class = "comcent-info">
+                        <view class = "comcent-nameAndtime">
+                            <view class = "comcent-nickname">{{comItem.nickName}}</view>
+                            <view class = "comcent-time">{{comItem.time}}</view>
+                        </view>
+                        <view class = "comcent-text">
+                        <text wx:if="{{comItem.toOpenid}}">回复<text>{{comItem.toNickname}}:</text></text>{{comItem.text}}
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+</block>
+
+<view class = "blank" style="height: 200rpx;"></view>
+<view class = "pub-comment" wx:if="{{pubShow == true}}">
+    <view class = "pub-left">
+        <input class = "pub-input" placeholder="{{placeHolder}}" bindinput="getInputValue" auto-focus="true" value="{{inputValue}}"></input>
+    </view>
+    <view class = "pub-botton" bindtap="publishComment">
+        发送
+    </view>
+</view>
